@@ -19,7 +19,8 @@ NFR3. | QP will automatically turn off recitation (after completing the verse) a
 
 #### System Decomposition
 ---
-![QPSystems.drawio.png](..%2F..%2FDownloads%2FQPSystems.drawio.png)
+![QPSystems drawio](https://github.com/ElkhalifaE/QuranPlayer/assets/81268860/7dc24e8c-1f61-43df-a2d3-53d240980773)
+
 
 ## Abstract and High Level Use Cases
 
