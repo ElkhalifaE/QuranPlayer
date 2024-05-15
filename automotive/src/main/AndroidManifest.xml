@@ -6,12 +6,27 @@
         android:required="true" />
 
     <application
+
         android:allowBackup="true"
         android:appCategory="audio"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuranPlayer" />
+        android:theme="@style/Theme.QuranPlayer" >
+        <service android:enabled="true" android:name="com.example.quranplayer.shared.MyMusicService" />
+        <activity
+            android:name="com.example.quranplayer.MainAutoActivity"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:label="@string/app_name">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+    </application>
 </manifest>

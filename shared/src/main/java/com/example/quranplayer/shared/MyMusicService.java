@@ -1,9 +1,34 @@
 package com.example.quranplayer.shared;
 
+import static android.service.voice.VoiceInteractionSession.SHOW_SOURCE_PUSH_TO_TALK;
+
+import static androidx.core.app.ActivityCompat.startActivityForResult;
+
+import android.content.ComponentCallbacks;
+import android.content.ComponentCallbacks2;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
+import android.graphics.Rect;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.inputmethod.CompletionInfo;
+import android.view.inputmethod.CursorAnchorInfo;
+import android.view.inputmethod.ExtractedText;
+import android.view.inputmethod.InputMethodSession;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 
+import android.service.voice.VoiceInteractionService;
+import android.service.voice.VoiceInteractionSession;
+import android.speech.RecognitionListener;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
+import android.speech.tts.Voice;
 import android.support.v4.media.MediaBrowserCompat.MediaItem;
 
 import androidx.media.MediaBrowserServiceCompat;
@@ -12,6 +37,11 @@ import android.support.v4.media.session.MediaSessionCompat;
 
 import java.util.ArrayList;
 import java.util.List;
+
+//We have to import VoiceInteraction for the physical push to talk button on steering wheel
+import android.service.voice.VoiceInteractionSession;
+import android.view.KeyEvent;
+import android.widget.Button;
 
 /**
  * This class provides a MediaBrowser through a service. It exposes the media library to a browsing
@@ -68,7 +98,6 @@ import java.util.List;
 public class MyMusicService extends MediaBrowserServiceCompat {
 
     private MediaSessionCompat mSession;
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -80,10 +109,7 @@ public class MyMusicService extends MediaBrowserServiceCompat {
                 MediaSessionCompat.FLAG_HANDLES_TRANSPORT_CONTROLS);
     }
 
-    @Override
-    public void onDestroy() {
-        mSession.release();
-    }
+
 
     @Override
     public BrowserRoot onGetRoot(@NonNull String clientPackageName,
@@ -101,6 +127,7 @@ public class MyMusicService extends MediaBrowserServiceCompat {
     private final class MediaSessionCallback extends MediaSessionCompat.Callback {
         @Override
         public void onPlay() {
+
         }
 
         @Override

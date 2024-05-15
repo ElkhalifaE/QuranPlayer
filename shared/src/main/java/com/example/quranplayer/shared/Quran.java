@@ -1,4 +1,4 @@
-package com.example.quranplayer;
+package com.example.quranplayer.shared;
 
 import java.util.Hashtable;
 public class Quran {
