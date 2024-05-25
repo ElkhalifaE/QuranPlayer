@@ -4,34 +4,44 @@
 4
 5    <uses-sdk android:minSdkVersion="28" />
 6
-7    <application android:appCategory="audio" >
-7-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:3:5-20:19
-7-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:3:18-45
-8        <meta-data
-8-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:5:9-7:59
-9            android:name="com.google.android.gms.car.application"
-9-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:6:13-66
-10            android:resource="@xml/automotive_app_desc" />
-10-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:7:13-56
+7    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+7-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:2:5-76
+7-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:2:22-74
+8    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+8-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:3:5-92
+8-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:3:22-89
+9
+10    <application android:appCategory="audio" >
+10-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:5:5-23:19
+10-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:5:18-45
 11
 12        <!--
-13         Main music service, provides media browsing and media playback services to
-14         consumers through MediaBrowserService and MediaSession. Consumers connect to it through
-15         MediaBrowser (for browsing) and MediaController (for playback control)
+13            <meta-data
+14            android:name="com.google.android.gms.car.application"
+15            android:resource="@xml/automotive_app_desc" />
 16        -->
-17        <service
-17-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:12:9-18:19
-18            android:name="com.example.quranplayer.shared.MyMusicService"
-18-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:13:13-73
-19            android:exported="true" >
-19-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:14:13-36
-20            <intent-filter>
-20-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:15:13-17:29
-21                <action android:name="android.media.browse.MediaBrowserService" />
-21-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:16:17-83
-21-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:16:25-80
-22            </intent-filter>
-23        </service>
-24    </application>
-25
-26</manifest>
+17
+18
+19        <!--
+20         Main music service, provides media browsing and media playback services to
+21         consumers through MediaBrowserService and MediaSession. Consumers connect to it through
+22         MediaBrowser (for browsing) and MediaController (for playback control)
+23        -->
+24        <service
+24-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:15:9-22:19
+25            android:name="com.EarthCustodian.quranplayer.shared.MyMusicService"
+25-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:16:13-80
+26            android:exported="true"
+26-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:18:13-36
+27            android:foregroundServiceType="mediaPlayback" >
+27-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:17:13-58
+28            <intent-filter>
+28-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:19:13-21:29
+29                <action android:name="android.media.browse.MediaBrowserService" />
+29-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:20:17-82
+29-->C:\Users\Elkhalifa\AndroidStudioProjects\QuranPlayer\shared\src\main\AndroidManifest.xml:20:25-80
+30            </intent-filter>
+31        </service>
+32    </application>
+33
+34</manifest>

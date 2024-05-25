@@ -3,15 +3,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.quranplayer"
+    namespace = "com.EarthCustodian.quranplayer"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.quranplayer"
+        applicationId = "com.EarthCustodian.quranplayer"
         minSdk = 28
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 4
+        versionName = "4.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -19,6 +19,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -32,7 +33,8 @@ android {
 }
 
 dependencies {
-
+    implementation ("androidx.core:core:1.1.0")
+    implementation ("androidx.media:media:1.1.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

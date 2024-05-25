@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">QuranPlayer</string>
-    <string name="Instructions">Give voice command like so: Chapter (number) Verse (number)</string>
     <string name="Prompt1">Would you like to use offline or online mode</string>
+
+    <string name="StartChapter">Start Chapter: Start Verse: </string>
+    <string name="EndChapter">End Chapter: End Verse: </string>
+    <string name="Loop">Number of loops: </string>
+
 </resources>

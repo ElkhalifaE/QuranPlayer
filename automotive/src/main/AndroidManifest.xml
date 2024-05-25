@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuranPlayer" >
-        <service android:enabled="true" android:name="com.example.quranplayer.shared.MyMusicService" />
+        <service android:enabled="true" android:name="com.EarthCustodian.quranplayer.shared.MyMusicService" />
         <activity
             android:name="com.example.quranplayer.MainAutoActivity"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar"

@@ -4,10 +4,17 @@
 
     <uses-sdk android:minSdkVersion="28" />
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
     <application android:appCategory="audio" >
-        <meta-data
+
+        <!--
+            <meta-data
             android:name="com.google.android.gms.car.application"
             android:resource="@xml/automotive_app_desc" />
+        -->
+
 
         <!--
          Main music service, provides media browsing and media playback services to
@@ -15,8 +22,9 @@
          MediaBrowser (for browsing) and MediaController (for playback control)
         -->
         <service
-            android:name="com.example.quranplayer.shared.MyMusicService"
-            android:exported="true" >
+            android:name="com.EarthCustodian.quranplayer.shared.MyMusicService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback" >
             <intent-filter>
                 <action android:name="android.media.browse.MediaBrowserService" />
             </intent-filter>

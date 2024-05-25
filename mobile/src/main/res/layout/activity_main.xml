@@ -5,54 +5,173 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.EarthCustodian.quranplayer.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="@string/app_name"
         android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="111dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="393dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="132dp"
-        android:text="@string/Instructions"
-        android:textSize="25sp"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        tools:layout_editor_absoluteX="9dp" />
-
-    <ImageButton
-        android:id="@+id/listenButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@android:drawable/ic_btn_speak_now"
-        tools:layout_editor_absoluteX="167dp" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <ImageButton
         android:id="@+id/pauseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@android:drawable/ic_media_play"
-        tools:layout_editor_absoluteX="167dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
     <TextView
         android:id="@+id/nowPlaying"
-        android:layout_width="369dp"
-        android:layout_height="71dp"
-        android:text='"Now playing chapter X verse Y" will be displayed here'
+        android:layout_width="303dp"
+        android:layout_height="67dp"
+        android:text='Now Playing Chapter X Verse X will be displayed here!'
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/pauseButton"
-        app:layout_constraintTop_toBottomOf="@+id/listenButton"
-        app:layout_constraintVertical_bias="0.752"
-        tools:layout_editor_absoluteX="21dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listenStart"
+        app:layout_constraintVertical_bias="0.898" />
+
+    <TextView
+        android:id="@+id/SCV"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
+        android:text="1"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toEndOf="@+id/SC"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <ImageButton
+        android:id="@+id/listenStart"
+        android:layout_width="49dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toEndOf="@+id/SCV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+    <TextView
+        android:id="@+id/ECV"
+        android:layout_width="54dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:text="114"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/listenEnd"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toEndOf="@+id/EC"
+        app:layout_constraintTop_toBottomOf="@+id/SVV" />
+
+    <TextView
+        android:id="@+id/EC"
+        android:layout_width="195dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="232dp"
+        android:text="@string/EndChapter"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/EVV"
+        android:layout_width="53dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:text="4"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toEndOf="@+id/EC"
+        app:layout_constraintTop_toBottomOf="@+id/ECV" />
+
+    <TextView
+        android:id="@+id/SC"
+        android:layout_width="195dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/StartChapter"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/EC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.605" />
+
+    <TextView
+        android:id="@+id/LV"
+        android:layout_width="68dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="54dp"
+        android:text="1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/nowPlaying"
+        app:layout_constraintEnd_toStartOf="@+id/listenLoop"
+        app:layout_constraintTop_toBottomOf="@+id/EVV" />
+
+    <ImageButton
+        android:id="@+id/listenEnd"
+        android:layout_width="50dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toEndOf="@+id/EVV"
+        app:layout_constraintTop_toBottomOf="@+id/listenStart"
+        app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+    <ImageButton
+        android:id="@+id/listenLoop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listenEnd"
+        app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+    <TextView
+        android:id="@+id/L"
+        android:layout_width="196dp"
+        android:layout_height="75dp"
+        android:text="@string/Loop"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/nowPlaying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EC"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <TextView
+        android:id="@+id/SVV"
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:text="1"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/listenStart"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toEndOf="@+id/SC"
+        app:layout_constraintTop_toBottomOf="@+id/SCV" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

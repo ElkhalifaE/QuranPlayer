@@ -18,8 +18,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.quranplayer.shared.Quran;
-import com.example.quranplayer.shared.Verse;
+import com.EarthCustodian.quranplayer.shared.Quran;
+import com.EarthCustodian.quranplayer.shared.Verse;
 
 import java.util.ArrayList;
 
